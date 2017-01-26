@@ -128,7 +128,7 @@ None
 
 
 [float]
-=== log_line
+=== message
 
 type: text
 

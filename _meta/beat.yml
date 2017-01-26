@@ -4,5 +4,8 @@
 
 datadumperbeat:
   # Defines how often an event is sent to the output
-  period: 1s
-  locale: en
+    period: 1s
+    # Number of events to simulate in that period
+    events_per_period: 10
+    # Locale of the traffic to simulate
+    locale: en

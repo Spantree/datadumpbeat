@@ -4,7 +4,10 @@
 
 datadumperbeat:
   # Defines how often an event is sent to the output
-  period: 100ms
+  period: 1s
+  # Number of events to simulate in that period
+  events_per_period: 10
+  # Locale of the traffic to simulate
   locale: en
 
 #================================ General =====================================
@@ -28,9 +31,9 @@ datadumperbeat:
 # Multiple outputs may be used.
 
 #-------------------------- Elasticsearch output ------------------------------
-output.elasticsearch:
+#output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["192.168.99.100:9200"]
+  #hosts: ["localhost:9200"]
 
   # Optional protocol and basic auth credentials.
   #protocol: "https"
@@ -38,9 +41,9 @@ output.elasticsearch:
   #password: "changeme"
 
 #----------------------------- Logstash output --------------------------------
-#output.logstash:
+output.logstash:
   # The Logstash hosts
-  #hosts: ["localhost:5044"]
+  hosts: ["192.168.99.100:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications

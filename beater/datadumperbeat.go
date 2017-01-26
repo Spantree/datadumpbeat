@@ -47,7 +47,6 @@ func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 
 //TODO: Add in weighting to verns
 //TODO: Add in proper random seeding
-//TODO: Look into sending bulk set of log lines
 //TODO: Preseed some referrers/pages so traffic looks more uniform
 //TODO: Resp & Byte code randomization
 func (bt *Datadumperbeat) Run(b *beat.Beat) error {
@@ -63,14 +62,16 @@ func (bt *Datadumperbeat) Run(b *beat.Beat) error {
 		case <-ticker.C:
 		}
 
-		event := common.MapStr{
-			"@timestamp": common.Time(time.Now()),
-			"type":       b.Name,
-			"log_line":   bt.generateFakeLogLine(),
-
+		events := make([]common.MapStr, bt.config.EventsToPublish)
+		for i := 0; i < bt.config.EventsToPublish; i++ {
+			events[i] = common.MapStr{
+				"@timestamp": common.Time(time.Now()),
+				"type":       b.Name,
+				"message":   bt.generateFakeLogLine(),
+			}
 		}
-		bt.client.PublishEvent(event)
-		logp.Info("Event sent")
+		bt.client.PublishEvents(events)
+		logp.Info("Events sent")
 		counter++
 	}
 }
@@ -79,12 +80,12 @@ func (bt *Datadumperbeat) generateFakeLogLine() string {
 	ip := bt.faker.IPv4Address()
 	uri := bt.faker.URL()
 	referer := bt.faker.URL()
-	time := time.Now().Format(time.RFC822Z)
+	time := time.Now().Format("02/Jan/2006:15:04:05 -0700")
 	respCode := 200
 	bytes := 123123
 	useragent := userAgent()
 
-	return fmt.Sprintf("%s - - [%s] \"%s %s HTTP/1.0\" %d %d \"%s\" \"%s\"", ip, time, httpVerb(), uri, respCode, bytes, referer, useragent)
+	return fmt.Sprintf(`%s - - [%s] "%s %s HTTP/1.0" %d %d "%s" "%s"`, ip, time, httpVerb(), uri, respCode, bytes, referer, useragent)
 }
 
 func (bt *Datadumperbeat) Stop() {

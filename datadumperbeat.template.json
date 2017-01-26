@@ -35,7 +35,7 @@
             }
           }
         },
-        "log_line": {
+        "message": {
           "norms": false,
           "type": "text"
         },
