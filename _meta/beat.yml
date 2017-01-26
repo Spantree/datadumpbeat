@@ -1,0 +1,8 @@
+################### Datadumperbeat Configuration Example #########################
+
+############################# Datadumperbeat ######################################
+
+datadumperbeat:
+  # Defines how often an event is sent to the output
+  period: 1s
+  locale: en

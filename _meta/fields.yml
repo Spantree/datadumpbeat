@@ -1,0 +1,9 @@
+- key: datadumperbeat
+  title: datadumperbeat
+  description:
+  fields:
+    - name: log_line
+      type: text
+      required: true
+      description: >
+        This is a beat output intended to simulate random Apache Logs for testing.
