@@ -6,13 +6,13 @@ package config
 import "time"
 
 type Config struct {
-	Period time.Duration `config:"period"`
-	Locale string `config:"locale"`
-	EventsToPublish int `config:"events_per_period"`
+	Period          time.Duration `config:"period"`
+	Locale          string `config:"locale"`
+	EventsPerPeriod int `config:"events_per_period"`
 }
 
 var DefaultConfig = Config{
 	Period: 1 * time.Second,
 	Locale: "en",
-	EventsToPublish: 10,
+	EventsPerPeriod: 10,
 }
