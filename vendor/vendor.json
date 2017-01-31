@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "MJk8bN15e/nKHGetO8GSfYIOKxE=",
+			"path": "github.com/dgryski/go-discreterand",
+			"revision": "57fa96b59f2a453d7341c5ba85cb02c1088beb89",
+			"revisionTime": "2015-04-23T09:39:09Z"
+		},
+		{
+			"checksumSHA1": "L6Ps004WGoAJBEBX5Zrv0tPa2b4=",
+			"path": "github.com/manveru/faker",
+			"revision": "717f7cf83fb78669bfab612749c2e8ff63d5be11",
+			"revisionTime": "2016-04-19T07:20:36Z"
+		}
+	],
+	"rootPath": "github.com/spantree/datadumpbeat"
+}
