@@ -1,5 +1,5 @@
-= Datadumperbeat Docs
+= datadumpbeat Docs
 
-Welcome to the Datadumperbeat documentation.
+Welcome to the datadumpbeat documentation.
 
 

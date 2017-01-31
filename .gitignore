@@ -2,6 +2,6 @@
 /build
 
 .DS_Store
-/datadumperbeat
-/datadumperbeat.test
+/datadumpbeat
+/datadumpbeat.test
 *.pyc

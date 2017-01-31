@@ -17,9 +17,9 @@ output:
     path: {{ '{{' }} output_file_path|default(beat.working_dir + "/output") {{ '}}' }}
 
 
-    # Name of the generated files. The default is `datadumperbeat` and it generates
-    # files: `datadumperbeat`, `datadumperbeat.1`, `datadumperbeat.2`, etc.
-    filename: "{{ '{{' }} output_file_filename|default("datadumperbeat") {{ '}}' }}"
+    # Name of the generated files. The default is `datadumpbeat` and it generates
+    # files: `datadumpbeat`, `datadumpbeat.1`, `datadumpbeat.2`, etc.
+    filename: "{{ '{{' }} output_file_filename|default("datadumpbeat") {{ '}}' }}"
 
     # Maximum size in kilobytes of each file. When this size is reached, the files are
     # rotated. The default value is 10 MB.
@@ -65,10 +65,10 @@ output:
 
   #files:
     # The directory where the log files will written to.
-    #path: /var/log/datadumperbeat
+    #path: /var/log/datadumpbeat
 
     # The name of the files where the logs are written to.
-    #name: datadumperbeat
+    #name: datadumpbeat
 
     # Configure log file size limit. If limit is reached, log file will be
     # automatically rotated

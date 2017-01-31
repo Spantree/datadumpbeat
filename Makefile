@@ -1,5 +1,5 @@
-BEAT_NAME=datadumperbeat
-BEAT_PATH=github.com/spantree/datadumperbeat
+BEAT_NAME=datadumpbeat
+BEAT_PATH=github.com/spantree/datadumpbeat
 BEAT_GOPATH=$(firstword $(subst :, ,${GOPATH}))
 BEAT_URL=https://${BEAT_PATH}
 SYSTEM_TESTS=false
@@ -35,7 +35,7 @@ git-init:
 	git commit -m "Add git settings"
 	git add .
 	git reset -- .travis.yml
-	git commit -m "Add datadumperbeat"
+	git commit -m "Add datadumpbeat"
 	git add .travis.yml
 	git commit -m "Add Travis CI"
 

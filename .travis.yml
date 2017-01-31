@@ -28,10 +28,10 @@ addons:
 
 before_install:
   # Redo the travis setup but with the elastic/libbeat path. This is needed so the package path is correct
-  - mkdir -p $HOME/gopath/src/github.com/spantree/datadumperbeat/
-  - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/spantree/datadumperbeat/
-  - export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/spantree/datadumperbeat/
-  - cd $HOME/gopath/src/github.com/spantree/datadumperbeat/
+  - mkdir -p $HOME/gopath/src/github.com/spantree/datadumpbeat/
+  - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/spantree/datadumpbeat/
+  - export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/spantree/datadumpbeat/
+  - cd $HOME/gopath/src/github.com/spantree/datadumpbeat/
 
 install:
   - true

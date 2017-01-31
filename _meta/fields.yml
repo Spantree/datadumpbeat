@@ -1,5 +1,5 @@
-- key: datadumperbeat
-  title: datadumperbeat
+- key: datadumpbeat
+  title: datadumpbeat
   description:
   fields:
     - name: message

@@ -1,6 +1,6 @@
 package main
 
-// This file is mandatory as otherwise the datadumperbeat.test binary is not generated correctly.
+// This file is mandatory as otherwise the datadumpbeat.test binary is not generated correctly.
 
 import (
 	"flag"

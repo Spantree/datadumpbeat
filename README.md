@@ -1,11 +1,11 @@
-# Datadumperbeat
+# datadumpbeat
 
-Welcome to Datadumperbeat.
+Welcome to datadumpbeat.
 
 This is a simple Beat that is meant to simulate some traffic for a given
 
 Ensure that this folder is at the following location:
-`${GOPATH}/github.com/spantree/datadumperbeat`
+`${GOPATH}/github.com/spantree/datadumpbeat`
 
 ### Requirements
 
@@ -14,8 +14,8 @@ Ensure that this folder is at the following location:
 
 ### Build
 
-To build the binary for Datadumperbeat run the command below. This will generate a binary
-in the same directory with the name datadumperbeat.
+To build the binary for datadumpbeat run the command below. This will generate a binary
+in the same directory with the name datadumpbeat.
 
 ```
 make
@@ -24,16 +24,16 @@ make
 
 ### Run
 
-To run Datadumperbeat with debugging output enabled, run:
+To run datadumpbeat with debugging output enabled, run:
 
 ```
-./datadumperbeat -c datadumperbeat.yml -e -d "*"
+./datadumpbeat -c datadumpbeat.yml -e -d "*"
 ```
 
 
 ### Test
 
-To test Datadumperbeat, run the following command:
+To test datadumpbeat, run the following command:
 
 ```
 make testsuite
@@ -53,7 +53,7 @@ The test coverage is reported in the folder `./build/coverage/`
 
 Each beat has a template for the mapping in elasticsearch and a documentation for the fields
 which is automatically generated based on `etc/fields.yml`.
-To generate etc/datadumperbeat.template.json and etc/datadumperbeat.asciidoc
+To generate etc/datadumpbeat.template.json and etc/datadumpbeat.asciidoc
 
 ```
 make update
@@ -62,7 +62,7 @@ make update
 
 ### Cleanup
 
-To clean  Datadumperbeat source code, run the following commands:
+To clean  datadumpbeat source code, run the following commands:
 
 ```
 make fmt
@@ -78,12 +78,12 @@ make clean
 
 ### Clone
 
-To clone Datadumperbeat from the git repository, run the following commands:
+To clone datadumpbeat from the git repository, run the following commands:
 
 ```
-mkdir -p ${GOPATH}/github.com/spantree/datadumperbeat
-cd ${GOPATH}/github.com/spantree/datadumperbeat
-git clone https://github.com/spantree/datadumperbeat
+mkdir -p ${GOPATH}/github.com/spantree/datadumpbeat
+cd ${GOPATH}/github.com/spantree/datadumpbeat
+git clone https://github.com/spantree/datadumpbeat
 ```
 
 

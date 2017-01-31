@@ -1,8 +1,8 @@
-################### Datadumperbeat Configuration Example #########################
+################### datadumpbeat Configuration Example #########################
 
-############################# Datadumperbeat ######################################
+############################# datadumpbeat ######################################
 
-datadumperbeat:
+datadumpbeat:
   # Defines how often an event is sent to the output
     period: 1s
     # Number of events to simulate in that period
