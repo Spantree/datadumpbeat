@@ -6,7 +6,7 @@ datadumpbeat:
   # Defines how often an event is sent to the output
   period: 1s
   # Number of events to simulate in that period
-  events_per_period: 10
+  events_per_period: 1
   # Locale of the traffic to simulate
   locale: en
 
@@ -43,7 +43,7 @@ datadumpbeat:
 #----------------------------- Logstash output --------------------------------
 output.logstash:
   # The Logstash hosts
-  hosts: ["192.168.99.100:5044"]
+  hosts: ["localhost:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
